@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* VARIABLES */
+
+:root {
+  --navColor: rgba(202, 8, 245);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ddd;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+}
+
+.contact {
+  padding: 0 0.5rem;
+}
+
+.education {
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr 1rem 1fr;
+}
+
+.employmentYyearsSmall {
+  text-align: center;
+}
+
+footer {
+  margin: 2rem;
+  text-align: end;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+#footer {
+  line-height: 1.5rem;
+}
+
+.footer-contact {
+  font-weight: bolder;
+}
+
+.footer-contact:hover {
+  text-decoration: underline;
+  font-size: larger;
+}
+
+header {
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 5rem;
+  /* margin-bottom: 1rem; */
+  border-bottom: 1px solid black;
+  box-shadow: 0px -0.2rem 2.5rem currentColor;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+li {
+  list-style: none;
+  line-height: 2rem;
+}
+
+.listTab {
+  margin-left: 1rem;
+}
+
+.navbar-content {
+  /* background-color: aliceblue; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-content a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-content h2 {
+  /* background-color: aqua; */
+  margin: 0 2rem;
+}
+
+.navbar-selection {
+  /* background-color: yellow; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-selection-item {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0 1rem 0 1rem;
+  text-decoration: none;
+}
+
+.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--navColor);
+  height: 2.5rem;
+  border-radius: 1rem;
+}
+
+.active a {
+  color: white;
+}
+
+.navbar-selection-item:hover {
+  border-bottom: 0.2rem solid var(--navColor);
+}
+
+.personalInfo {
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 35% 35% 30%;
+}
+
+.infoSmall {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+#personalInfoSmall {
+  display: none;
+}
+
+#educationSmall {
+  display: none;
+}
+
+.personal-info-photo-small {
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+
+.personal-info-title,
+.personal-info-detail,
+.personal-info-photo,
+.education-years,
+.employment-years,
+.shore-years {
+  padding: 0 3rem;
+}
+
+.personal-info-title,
+.education-years,
+.employment-years,
+.shore-years {
+  margin: auto;
+}
+
+.personal-statement {
+  font-size: 1.1rem;
+  line-height: 2rem;
+  padding: 0 2rem;
+}
+
+.seaEmployment {
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.seaEmploymentSmall {
+  display: none;
+}
+
+.shore-experience-small {
+  display: none;
+}
+
+#box1 {
+  grid-area: box1;
+  margin: 1rem;
+}
+#box2 {
+  grid-area: box2;
+  margin: 1rem;
+}
+#box3 {
+  grid-area: box3;
+  margin: 1rem;
+}
+#box4 {
+  grid-area: box4;
+  margin: 1rem;
+}
+#box5 {
+  grid-area: box5;
+  margin: 1rem;
+}
+#box6 {
+  grid-area: box6;
+  margin: 1rem;
+}
+
+.sea-experience {
+  display: grid;
+  grid-template-areas:
+    "box1 box2 box3"
+    "box4 box5 box3"
+    "box6 . . ";
+  margin-left: 10rem;
+}
+
+.sea-experience h3 {
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.section-header {
+  height: 4rem;
+  width: 100vw;
+  text-align: center;
+  padding: 1rem;
+  background-color: #ddd;
+  position: sticky;
+  top: 5rem;
+  margin-bottom: 6rem;
+}
+
+section {
+  margin-bottom: 5rem;
+}
+
+.shore-experience {
+  display: grid;
+  grid-template-columns: 1fr 1rem 1fr;
+}
+
+@media (max-width: 1450px) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .active {
+    display: flex;
+    align-items: center;
+    background-color: var(--navColor);
+    height: 3.2rem;
+    border-radius: 1rem;
+  }
+}
+
+@media (max-width: 1050px) {
+  /* NavBAr */
+  .navbar-selection {
+    display: none;
+  }
+
+  .section-header {
+    margin-bottom: 1rem;
+  }
+ 
+  /* EDUCATION */
+  .education {
+    display: none;
+  }
+  #educationSmall {
+    display: block;
+    text-align: center;
+  }
+  /* SEA EMPLOYMENT */
+  .seaEmployment {
+    display: none;
+  }
+  .seaEmploymentSmall {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*SEA EXPERIENCE  */
+  .sea-experience {
+    display: block;
+    text-align: center;
+    margin: 0;
+  }
+  /* SHORE EXPERIENCE */
+  .shore-experience {
+    display: none;
+  }
+  .shore-experience-small {
+    display: block;
+    text-align: center;
+  }
+
+  .personalSmall{
+    text-align: center;
+  }
+}
+
+@media (max-width:980px){
+     /* Personal Info */
+  #personalInfo {
+    display: none;
+  }
+
+  #personalInfoSmall {
+    display: block;
+    text-align: center;
+  }
+}
